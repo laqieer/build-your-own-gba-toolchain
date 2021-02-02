@@ -33,7 +33,7 @@ To sum up, [Google Is Your Best Friend](http://giybf.com/).
 
 Now we have our own toolchain, let's test it.
 
-All files in `test` directory are borrowed from somewhere else (first.c` from [tonc](https://www.coranac.com/tonc/text/toc.htm) and others from [here](https://github.com/felixjones/gba-toolchain) with a little modifications). I know the code is ugly, but it is only for test.
+All files in `test` directory are borrowed from somewhere else (`first.c` from [tonc](https://www.coranac.com/tonc/text/toc.htm) and others from [here](https://github.com/felixjones/gba-toolchain) with a little modifications). I know the code is ugly, but it is only for test.
 
 ```
 arm-gba-eabi-gcc -nostartfiles -Xlinker -T gba.ld first.c crt0.s gba-syscalls.c
