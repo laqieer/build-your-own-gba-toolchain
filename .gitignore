@@ -1,0 +1,5 @@
+.build
+build.log
+.config.old
+test/a.out
+test/first.gba
