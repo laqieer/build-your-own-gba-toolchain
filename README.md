@@ -16,16 +16,16 @@ You can load `.config` file in its config menu. Don't forget to change `Toolchai
 Here are problems I met and solutions I found:
 
 1. My OS is [CentOS 7](https://www.centos.org/). Accoding to crosstool-NG 1.24.0's [release note](https://crosstool-ng.github.io/2019/04/13/release-1.24.0.html), its g++ version cannot build gdb.
-Solution: Follow [this doc](https://www.softwarecollections.org/en/scls/rhscl/devtoolset-8/) to update it.
+**Solution**: Follow [this doc](https://www.softwarecollections.org/en/scls/rhscl/devtoolset-8/) to update it.
 
 1. OS's setting up. According to crosstool-NG's [doc](https://crosstool-ng.github.io/docs/os-setup/), you should read its dockerfile to figure out its dependencies.
-Solution: Read dockerfile as it says. For CentOS 7, `yum install -y autoconf gperf bison file flex texinfo help2man gcc-c++ libtool make patch ncurses-devel python36-devel perl-Thread-Queue bzip2 git wget which xz unzip`.
+**Solution**: Read dockerfile as it says. For CentOS 7, `yum install -y autoconf gperf bison file flex texinfo help2man gcc-c++ libtool make patch ncurses-devel python36-devel perl-Thread-Queue bzip2 git wget which xz unzip`.
 
-1. `[ERROR]  You must NOT be root to run crosstool-NG`
-Solution: Run it as another user or `CT_ALLOW_BUILD_AS_ROOT=y` according to [this](https://stackoverflow.com/questions/17466017/how-to-solve-you-must-not-be-root-to-run-crosstool-ng-when-using-ct-ng).
+1. `[ERROR]  You must NOT be root to run crosstool-NG.`
+**Solution**: Run it as another user or `CT_ALLOW_BUILD_AS_ROOT=y` according to [this](https://stackoverflow.com/questions/17466017/how-to-solve-you-must-not-be-root-to-run-crosstool-ng-when-using-ct-ng).
 
 1. `[ERROR]  Don't set LD_LIBRARY_PATH. It screws up the build.`
-Solution: `unset LD_LIBRARY_PATH` accoding to this [doc](https://github.com/jcmvbkbc/crosstool-NG/blob/069dfea0c7372b76a40d6a67152c8a285df0f74c/docs/B%20-%20Known%20issues.txt#L255).
+**Solution**: `unset LD_LIBRARY_PATH` accoding to this [doc](https://github.com/jcmvbkbc/crosstool-NG/blob/069dfea0c7372b76a40d6a67152c8a285df0f74c/docs/B%20-%20Known%20issues.txt#L255).
 
 To sum up, [Google Is Your Best Friend](http://giybf.com/).
 
