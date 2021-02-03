@@ -46,7 +46,12 @@ Here are some notes:
 
 1. This is only to test toolchain. For non-trivial development, use [build automation](https://en.wikipedia.org/wiki/List_of_build_automation_software).
 
-1. `crt0` and `stub` can also be merged into libc which is a part of our toolchain. Follow this [guide](https://www.embecosm.com/appnotes/ean9/ean9-howto-newlib-1.0.html) for [newlib](https://sourceware.org/newlib/).
-
 1. `gba.ld` here is [linker script](https://ftp.gnu.org/old-gnu/Manuals/ld-2.9.1/html_chapter/ld_3.html) for gba cartridge. Use [this](https://github.com/felixjones/gba-toolchain/blob/master/lib/multiboot/gba.ld) for multiboot.
+
+1. `crt0` and `syscalls` can also be merged into libc which is a part of our toolchain. Here are docs for porting [newlib](https://sourceware.org/newlib/) ([Google Is Your Best Friend](http://giybf.com/) again).
+    - [Howto: Porting newlib](https://www.embecosm.com/appnotes/ean9/ean9-howto-newlib-1.0.html)
+    - [Embedding with GNU: Newlib](https://www.embedded.com/embedding-with-gnu-newlib/)
+    - [Embedding GNU: Newlib, Part 2](https://www.embedded.com/embedding-gnu-newlib-part-2/)
+    - [Porting Newlib](https://wiki.osdev.org/Porting_Newlib)
+    - [Porting and Using Newlib in Embedded Systems](https://www.cs.ccu.edu.tw/~pahsiung/courses/esd/resources/newlib.pdf)
 
